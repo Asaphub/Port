@@ -1,11 +1,14 @@
 ---
-const personalImageAlt = "Miguel Ángel"
+const personalImageAlt = "Jonathan Fierro"
 import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import SocialPill from "../components/SocialPill.astro"
 
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
+<div class="max-w-xl p-4">
+  <div class="flex gap-4 mb-4 mx-auto">
     <img
       class="rounded-full shadow-lg size-16"
       src="/jf.png"
@@ -17,20 +20,30 @@ import Badge from "../components/Badge.astro"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
+      <Badge>Disponible como freelance</Badge>
     </a>
   </div>
   <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white text-yellow-neon mx-auto "
   >
-    Hey, me llamo Jonathan
+    Hola, soy Jonathan Fierro
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 mx-auto "
   >
-    +6 años de experiencia. <strong
-      >Ingeniero en sistemas y Creador Videojuegos indie</strong
-    > de Cancun, Mexico. Especializado en servidores linux y redes.
+    +6 años de experiencia. <strong class="text-cyan">
+      Ingeniero en sistemas y Creador Videojuegos indie</strong> de México. Especializado en servidores Linux y redes.
   </p>
+
+  <nav class="flex flex-wrap gap-4 mt-8 mx-auto text-xl">
+    <SocialPill href="mailto:jonathanfierro.is@gmail.com">
+      <MailIcon class="size-8" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/jonathan-fierro">
+      <LinkedInIcon class="size-8" />
+      LinkedIn
+    </SocialPill>
+  </nav>
  
 </div>

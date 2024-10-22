@@ -1,10 +1,25 @@
-<header class="bg-gray-800 p-4 zian">
-    <nav class="flex justify-center">
-      <div class="flex space-x-6">
-        <a href="#" class="text-gray-300 hover:text-white zian ">Home</a>
-        <a href="#" class="text-gray-300 hover:text-white">About</a>
-        <a href="#" class="text-gray-300 hover:text-white">Experience</a>
-        <a href="#" class="text-gray-300 hover:text-white">Contact</a>
-      </div>
-    </nav>
-  </header>
+---
+import Job from "../components/icons/Job.astro";
+import Code from "../components/icons/Code.astro";
+import People from "../components/icons/People.astro";
+import Contact from "../components/icons/Contact.astro";
+---
+
+<header class="p-4">
+  <nav class="flex justify-center">
+    <div class="flex space-x-4 border border-cyan-300 rounded-full">
+      <a href=#experience class="text-yellow-neon-h p-2 dark:text-yellow-200"
+        ><Job class="size-8" />
+      </a>
+      <a href=#projects class="text-yellow-neon-h p-2 dark:text-yellow-200"
+        ><Code class="size-8" /></a
+      >
+      <a href="#" class="text-yellow-neon-h p-2 dark:text-yellow-200"
+        ><People class="size-8" /></a
+      >
+      <a href="#" class="text-yellow-neon-h p-2 dark:text-yellow-200"
+        ><Contact class="size-8" /></a
+      >
+    </div>
+  </nav>
+</header>

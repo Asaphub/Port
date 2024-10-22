@@ -3,15 +3,37 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import SectionCont from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import Job from "../components/icons/Job.astro";
+import Code from "../components/icons/Code.astro";
+import Experience from "../components/Experience.astro";
 import Card from "../components/Card.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<SectionCont class="py-20">
-			<Hero />
-		</SectionCont>
-	</main>
+  <main>
+    <SectionCont class="py-20">
+      <Hero />
+    </SectionCont>
+    <div class="space-y-24">
+      <SectionCont id="experience">
+        <TitleSection>
+          <Job class="size-8" />
+          Experiencia laboral
+        </TitleSection>
+        <Experience />
+      </SectionCont>
+
+      <SectionCont id="proyectos">
+        <TitleSection>
+          <Code class="size-7" />
+          Proyectos
+        </TitleSection>
+		<Projects/>
+      </SectionCont>
+    </div>
+  </main>
 </Layout>
 
 <style></style>

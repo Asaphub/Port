@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
@@ -9,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" >
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -18,22 +19,88 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="gradient" >
     <Header />
 
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
   :root {
   }
   html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
     font-family: system-ui, sans-serif;
-    background: #060606;
+    background: linear-gradient(180deg, #1A1A1A, #FF005B);
   }
-  .zian{
-
-	color:  #00BFFF;
-
+  .zian {
+    color: #00bfff;
   }
+  .gradient {
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 3%) 55%,
+    hsl(312deg 23% 9%) 77%,
+    hsl(310deg 32% 13%) 85%,
+    hsl(309deg 39% 17%) 91%,
+    hsl(308deg 44% 21%) 94%,
+    hsl(308deg 48% 25%) 97%,
+    hsl(308deg 52% 29%) 98%,
+    hsl(307deg 56% 33%) 99%,
+    hsl(307deg 59% 36%) 100%,
+    hsl(307deg 63% 40%) 100%,
+    hsl(306deg 66% 44%) 100%,
+    hsl(306deg 70% 48%) 100%,
+    hsl(306deg 78% 51%) 100%
+  );
+
+  .text-black-deep {
+    color: #1A1A1A;
+}
+.text-fuccia{
+  color: fuchsia;
+}
+
+.text-pink {
+    color: #FF005B;
+}
+
+.text-cyan {
+    color: #00BFFF;
+}
+
+.text-orange {
+    color: #FF7F00;
+}
+
+.text-green {
+    color: #A8E600;
+}
+
+.text-gray-dark {
+    color: #2F2F2F;
+}
+.text-yellow-neon {
+    color: #FFD300;
+    
+}
+
+
+.text-yellow-neon-h {
+    color: #FFD300;
+    
+}
+
+.text-yellow-neon-h:hover {
+    color: cyan; /* Cambia a blanco al hacer hover */
+}
+
+.border.gree{
+  border: solid #A8E600;
+}
+}
 </style>
