@@ -1,33 +1,75 @@
 ---
+import Unity from "./icons/Unity.astro";
+import CSharp from "./icons/CSharp.astro";
+import Illustrator from "./icons/Illustrator.astro";
+import Photoshop from "./icons/Photoshop.astro";
+
+
+const TAGS = {
+  UNITY: {
+    name: "Unity",
+    class: "bg-black text-white",
+    icon: Unity,
+  },
+  CSHARP: {
+    name: "C#",
+    class: "bg-[#003159] text-white",
+    icon: CSharp,
+  },
+  ILLUSTRATOR: {
+    name: "Illustrator",
+    class: "bg-[#003159] text-white",
+    icon: Illustrator,
+  },
+  PHOTOSHOP: {
+    name: "Photoshop",
+    class: "bg-[#003159] text-white",
+    icon: Photoshop,
+  },
+};
 
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "StickBoard",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
+      "En StickBoard, un emocionante endless game de skate, 'Stiky' se enfrenta al desafío de recolectar la máxima cantidad de monedas mientras surcas una plataforma interminable. Con controles intuitivos y obstáculos impredecibles, cada intento es una oportunidad para mejorar tus habilidades y alcanzar nuevas alturas. ¡Prepárate para un viaje sin fin lleno de adrenalina!",
+    link: "https://selvaescondida.mx/",
     github: "https://github.com/pheralb/svgl",
-    image: "https://via.placeholder.com/300x200",
-    tags: ['HTML', 'CSS', 'JavaScript'],
-  }]
+    image: "/projects/stickBoard.webp",
+    tags: [TAGS.CSHARP, TAGS.UNITY, TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP],
+  },
+];
 ---
 
 {
-PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
-        <h3>{title}</h3>
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article class="max-w-xl p-4">
+      <h3 class="text-2xl font-semibold  mx-auto text-justify  text-cyan-300 ">
+        {title}
+      </h3>
 
-        <p>{description}</p>
+      <p class="text-xl text-fuchsia-300 text-pretty py-3 text-justify">
+        {description}
+      </p>
 
-        <ul>
-            {tags.map(tag => (
-            <li>{tag}</li>
-            ))}
-            </ul>
+      <ul class="flex gap-x-4 flex-row mb-4">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-m ${tag.class} py-1 px-2 `}
+            >
+              <tag.icon class="size-6" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
 
-            <img src={image} alt={`Proyecto captura ${image}`}/>
-        </article>
-)) 
-
+      <img
+        class="rounded shadow-xl shadow-gray-300/70"
+        src={image}
+        alt={`Proyecto captura ${image}`}
+      />
+    </article>
+  ))
 }
-

@@ -9,11 +9,13 @@ import Code from "../components/icons/Code.astro";
 import Experience from "../components/Experience.astro";
 import Card from "../components/Card.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import People from "../components/icons/People.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <SectionCont class="py-20">
+    <SectionCont class="py-16">
       <Hero />
     </SectionCont>
     <div class="space-y-24">
@@ -25,14 +27,22 @@ import Projects from "../components/Projects.astro";
         <Experience />
       </SectionCont>
 
-      <SectionCont id="proyectos">
+      <SectionCont id="projects">
         <TitleSection>
-          <Code class="size-7" />
+          <Code class="size-8 ml-4 mb-0" />
           Proyectos
         </TitleSection>
 		<Projects/>
+      </SectionCont>    
+      
+      
+      <SectionCont id="about">
+        <TitleSection>
+          <People class="size-8 ml-4 mb-0" />
+          Sobre mí
+        </TitleSection>
+        <About />
       </SectionCont>
-    </div>
   </main>
 </Layout>
 
