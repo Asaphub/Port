@@ -14,18 +14,11 @@ import People from "../components/icons/People.astro";
 import TechCarousel from "../components/TechCarousel.astro";
 ---
 
-<Layout title="Jonathan Fierro">
+<Layout title="Jonathan Fierro - Ingeniero en Sistemas y Creador de Videojuegos Indie">
   <main>
     <SectionCont class="py-16">
       <Hero />
     </SectionCont>
-
-    <SectionCont class="">
-      <TechCarousel />
-    </SectionCont>
-
-  
-
     <SectionCont id="experience" class="mx-auto py-10">
       <TitleSection>
         <Job class="size-8 ml-4" />
@@ -36,13 +29,16 @@ import TechCarousel from "../components/TechCarousel.astro";
 
     <SectionCont id="projects">
       <TitleSection>
-        <Code class="size-8 ml-4 mb-0" />
+        <Code class="size-8 ml-4" />
         Proyectos
       </TitleSection>
       <Projects />
     </SectionCont>
+    <SectionCont class="py-12">
+      <TechCarousel />
+    </SectionCont>
 
-    <SectionCont id="about" class="py-10">
+    <SectionCont id="about" class="">
       <TitleSection>
         <People class="size-8 ml-4 mb-0" />
         Sobre mí
