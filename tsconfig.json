@@ -1,3 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": false,
+    "strict": true,
+    // Otras configuraciones necesarias
+},
+"include": ["src/**/*.astro", "src/**/*.ts", "src/**/*.js"]
 }

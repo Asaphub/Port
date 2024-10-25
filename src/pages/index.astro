@@ -11,38 +11,44 @@ import Card from "../components/Card.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/About.astro";
 import People from "../components/icons/People.astro";
+import TechCarousel from "../components/TechCarousel.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Jonathan Fierro">
   <main>
     <SectionCont class="py-16">
       <Hero />
     </SectionCont>
-    <div class="space-y-24">
-      <SectionCont id="experience" class="mx-auto">
-        <TitleSection>
-          <Job class="size-8 ml-4" />
-          Experiencia laboral
-        </TitleSection>
-        <Experience />
-      </SectionCont>
 
-      <SectionCont id="projects">
-        <TitleSection>
-          <Code class="size-8 ml-4 mb-0" />
-          Proyectos
-        </TitleSection>
-		<Projects/>
-      </SectionCont>    
-      
-      
-      <SectionCont id="about">
-        <TitleSection>
-          <People class="size-8 ml-4 mb-0" />
-          Sobre mí
-        </TitleSection>
-        <About />
-      </SectionCont>
+    <SectionCont class="">
+      <TechCarousel />
+    </SectionCont>
+
+  
+
+    <SectionCont id="experience" class="mx-auto py-10">
+      <TitleSection>
+        <Job class="size-8 ml-4" />
+        Experiencia laboral
+      </TitleSection>
+      <Experience />
+    </SectionCont>
+
+    <SectionCont id="projects">
+      <TitleSection>
+        <Code class="size-8 ml-4 mb-0" />
+        Proyectos
+      </TitleSection>
+      <Projects />
+    </SectionCont>
+
+    <SectionCont id="about" class="py-10">
+      <TitleSection>
+        <People class="size-8 ml-4 mb-0" />
+        Sobre mí
+      </TitleSection>
+      <About />
+    </SectionCont>
   </main>
 </Layout>
 

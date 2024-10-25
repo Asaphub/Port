@@ -3,6 +3,8 @@ import Unity from "./icons/Unity.astro";
 import CSharp from "./icons/CSharp.astro";
 import Illustrator from "./icons/Illustrator.astro";
 import Photoshop from "./icons/Photoshop.astro";
+import { Image } from 'astro:assets';
+import Stiky from "../components/images/projects/stickBoard.webp"
 
 
 const TAGS = {
@@ -48,11 +50,11 @@ const PROJECTS = [
         {title}
       </h3>
 
-      <p class="text-xl text-fuchsia-300 text-pretty py-3 text-justify">
+      <p class="text-lg text-gray-light text-pretty py-3 text-justify">
         {description}
       </p>
 
-      <ul class="flex gap-x-4 flex-row mb-4">
+      <ul class="flex flex-wrap gap-4 mt-8 mb-8 mx-auto ">
         {tags.map((tag) => (
           <li>
             <span
@@ -65,10 +67,11 @@ const PROJECTS = [
         ))}
       </ul>
 
-      <img
+      <Image
         class="rounded shadow-xl shadow-gray-300/70"
-        src={image}
+        src={Stiky}
         alt={`Proyecto captura ${image}`}
+        loading="lazy" 
       />
     </article>
   ))

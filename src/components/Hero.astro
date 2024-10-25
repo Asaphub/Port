@@ -4,6 +4,8 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
 import MailIcon from "../components/icons/Mail.astro"
 import SocialPill from "../components/SocialPill.astro"
+import TechCarousel from "./TechCarousel.astro"
+
 
 ---
 
@@ -15,28 +17,27 @@ import SocialPill from "../components/SocialPill.astro"
       alt={personalImageAlt}
     />
     <a
-      href="https://linkedin.com/in/midudev"
+      href="https://linkedin.com/in/jonathan-fierro"
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible como freelance</Badge>
+      <Badge>No busco trabajo</Badge>
     </a>
   </div>
   <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white text-yellow-neon mx-auto "
+    class="text-4xl font-bold tracking-tight sm:text-5xl  text-pink mx-auto "
   >
     Hola, soy Jonathan Fierro
   </h1>
-  <p
-    class="mt-6 text-xl text-fuchsia-300 font-semibold  mx-auto "
-  >
-    +6 años de experiencia. <strong class="text-cyan-400">
-      Ingeniero en sistemas y Creador Videojuegos indie</strong> de México. Especializado en servidores Linux y redes.
-  </p>
+  <p class="mt-6 text-xl text-gray-light font-semibold mx-auto">
+    +6 años de experiencia. <span class="text-green">Ingeniero en sistemas y creador de videojuegos indie</span>, originario de México. Especializado en <span class="text-green">servidores Linux y Windows</span>, así como en redes. Apasionado por la tecnología, busco aportar soluciones innovadoras en cada proyecto.
+</p>
+
 
   <nav class="flex flex-wrap gap-4 mt-8 mx-auto text-xl">
     <SocialPill href="mailto:jonathanfierro.is@gmail.com">
+
       <MailIcon class="size-8" />
       Contáctame
     </SocialPill>
@@ -45,5 +46,4 @@ import SocialPill from "../components/SocialPill.astro"
       LinkedIn
     </SocialPill>
   </nav>
- 
 </div>
