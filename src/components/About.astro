@@ -1,28 +1,47 @@
 ---
- const personalImageAlt = "Jonathan Fierro"
- import { Image } from 'astro:assets';
-import faceJF from "../components/images/jf.png"
- 
+const personalImageAlt = "Jonathan Fierro";
+import { Image } from "astro:assets";
+import faceJF from "../components/images/jf.webp";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 md:flex-row mx-auto text-gray-light p-4 text-pretty text-lg">
-    <div
-      class="mb-4 text-pretty order-2 md:order-1"
-    >
+<article
+  class="flex flex-col items-center justify-center gap-8 md:flex-row mx-auto text-gray-light p-4 text-pretty text-lg"
+>
+  <div class="mb-4 text-pretty order-2 md:order-1">
     <p class="">
-      Me llamo <strong class="text-cya">Jonathan Fierro</strong> y mi interés por la tecnología nació cuando escuché "Navegar por internet" a los 6 años, (así decían, nací en el 93). Desde entonces, comenzó un <strong class="text-cya">viaje de aprendizaje continuo</strong> que ofrece gran satisfacción. Estoy inmerso en el desarrollo de <strong class="text-cya">videojuegos y páginas web</strong>.
-  </p>
-  
-  <p>
-      He creado varios juegos para la <strong class="text-cya">Play Store</strong> y desarrollado páginas web para diversas empresas, incluidas pymes. Mis herramientas preferidas incluyen <strong class="text-cya">C# y Unity</strong> para videojuegos, y <strong class="text-cya">PHP, Laravel, Node.js, Angular y React</strong> para el desarrollo web.
-  </p>
-  
-  <p>
-      Uno de mis orgullos es mi primer juego, <strong class="text-cya">"Stickboard"</strong>, lanzado en 2016. La constante evolución de la tecnología me motiva a seguir aprendiendo y a crear experiencias que alegren a otros.
-  </p>
-  
-    </div>
-  
-    <Image width="200" height="200" src={faceJF} alt="Jonathan Fierro" class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20" style="object-position: 50% 50%" loading="lazy" >
-  </article>
-  
+      Me llamo <strong class="text-cya">Jonathan Fierro</strong> y mi interés por
+      la tecnología nació cuando escuché "Navegar por internet" a los 6 años, (así
+      decían, nací en el 93). Desde entonces, comenzó un <strong
+        class="text-cya">viaje de aprendizaje continuo</strong
+      > que ofrece gran satisfacción. Estoy inmerso en el desarrollo de <strong
+        class="text-cya">videojuegos y páginas web</strong
+      >.
+    </p>
+
+    <p>
+      He creado varios juegos para la <strong class="text-cya"
+        >Play Store</strong
+      > y desarrollado páginas web para diversas empresas, incluidas pymes. Mis herramientas
+      preferidas incluyen <strong class="text-cya">C# y Unity</strong> para videojuegos,
+      y <strong class="text-cya">PHP, Laravel, Node.js, Angular y React</strong>
+      para el desarrollo web.
+    </p>
+
+    <p>
+      Uno de mis orgullos es mi primer juego, <strong class="text-cya"
+        >"Stickboard"</strong
+      >, lanzado en 2016. La constante evolución de la tecnología me motiva a
+      seguir aprendiendo y a crear experiencias que alegren a otros.
+    </p>
+  </div>
+
+  <Image
+    width="200"
+    height="200"
+    src={faceJF}
+    alt="Jonathan Fierro"
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+    loading="lazy"
+  />
+</article>
